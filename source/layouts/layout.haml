@@ -1,0 +1,32 @@
+!!!
+%html
+  %head
+    %meta{charset: 'utf-8'}
+    %meta{content: 'text/html; charset=UTF-8', 'http-equiv': 'Content-Type'}
+    %meta{content: 'IE=edge', 'http-equiv': 'X-UA-Compatible'}
+    %meta{name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no'}
+
+    %link{href: asset_path(:images, 'favicon.ico'), rel: 'icon'}
+    %link{href: 'https://fonts.googleapis.com/css?family=Coda|VT323', rel: 'stylesheet'}
+
+    %title= current_page.data.title
+    %meta{content: current_page.data.description, name: 'description'}
+
+    %meta{name: 'twitter:card', content: 'summary'}
+    %meta{name: 'twitter:creator', content: '@mikeycgto'}
+    %meta{name: 'twitter:title', content: current_page.data.title}
+    %meta{name: 'twitter:description', content: current_page.data.description}
+    %meta{name: 'twitter:image', content: asset_path(:images, 'me.jpg')}
+
+    %meta{property: 'og:title', content: current_page.data.title}
+    %meta{property: 'og:type', content: 'article'}
+    %meta{property: 'og:image', content: asset_path(:images, 'me.jpg')}
+    %meta{property: 'og:description', content: current_page.data.description}
+
+    = stylesheet_link_tag 'site'
+    = javascript_include_tag 'site'
+  %body{:class => page_classes}
+    = partial 'header'
+    %main
+      = yield
+    = partial 'footer'
