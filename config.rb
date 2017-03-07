@@ -6,26 +6,16 @@
 #
 # With no layout
 page '/*.xml', layout: false
-page '/*.json', layout: false
 page '/*.txt', layout: false
-
-# With alternative layout
-# page "/path/to/file.html", layout: :otherlayout
-
-# Proxy pages (http://middlemanapp.com/basics/dynamic-pages/)
-# proxy "/this-page-has-no-template.html", "/template-file.html", locals: {
-#  which_fake_page: "Rendering a fake page with a local variable" }
 
 # General configuration
 set :fonts_dir,  'fonts'
 
-# Reload the browser automatically whenever files change
-configure :development do
-  activate :livereload
-end
-
 # Enable middleman-protect-emails
 activate :protect_emails
+
+# Enable robot friendly site maps
+activate :sitemap
 
 ###
 # Helpers
@@ -46,3 +36,9 @@ configure :build do
   # Minify Javascript on build
   activate :minify_javascript
 end
+
+# Reload the browser automatically whenever files change
+configure :development do
+  activate :livereload
+end
+
