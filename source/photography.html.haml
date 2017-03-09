@@ -1,4 +1,19 @@
 ---
 title: "Photography | michaeljcoyne.me"
-description: ""
+description: "I love photography and am always searching for great vantage points to take the pefect shot! This page lists some of my favorite photos."
 ---
+
+%h1 Photography
+
+%p
+  I love photography and am always searching for great vantage points to take
+  the pefect shot! Here are some my favorite photos:
+
+%section.gallery
+  - each_photo_and_size do |photo_set|
+    %picture
+      - photo_set.each.with_index do |(photo, size), index|
+        - if index < photo_set.size - 1
+          %source{srcset: image_path(photo), media: "(min-width: #{size / 2})"}
+        - else
+          %img{src: image_path(photo)}

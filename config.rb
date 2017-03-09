@@ -1,3 +1,5 @@
+require 'extensions/photo_resize'
+
 ###
 # Page options, layouts, aliases and proxies
 ###
@@ -17,16 +19,24 @@ activate :protect_emails
 # Enable robot friendly site maps
 activate :sitemap
 
+# Setup and activate photo resize extension
+PHOTO_SIZES = {
+  small:  960,
+  medium: 1920,
+  large:  2800
+}
+
+ignore 'photos/*'
+ignore 'photography.html'
+
+activate :photo_resize,
+  path_name: 'photos', sizes: PHOTO_SIZES
+
 ###
 # Helpers
-###
 
-# Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
+#helpers do
+#end
 
 # Build-specific configuration
 configure :build do
