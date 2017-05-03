@@ -2,7 +2,7 @@ header {
     @include clearfix;
 
     a.logo, nav {
-        line-height:10vh;
+        line-height:12vh;
     }
 
     a.logo {
@@ -40,28 +40,6 @@ header {
                 &:before {
                     transform: scaleX(1);
                 }
-            }
-        }
-    }
-}
-
-@media all and (max-width: 580px) {
-    header {
-        height:auto;
-
-        a.logo, nav {
-            float:none;
-        }
-
-        a.logo, nav > a {
-            display:block;
-            text-align:center;
-            width:100%;
-            margin:0;
-        }
-
-        nav > a {
-            &:before {
             }
         }
     }

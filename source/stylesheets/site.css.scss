@@ -21,16 +21,31 @@ header, main, footer {
     margin:0 auto;
 }
 
-header, footer {
-    height:10vh;
+header {
+    height:12vh;
+}
+
+footer {
+    height:5vh;
 }
 
 main {
     min-height:80vh;
 
+    * {
+        &:first-of-type {
+            margin-top:0;
+        }
+    }
+
     p {
         text-align:justify;
         text-shadow:0px 1px 1px rgba(255,255,255,0.25);
+        margin-bottom:2em;
+
+        &:last-of-type {
+            margin-bottom:0;
+        }
     }
 
     .center { text-align:center }
@@ -46,12 +61,12 @@ a:hover {
     transition: color 0.25s ease-in;
 }
 
-@import "mixin";
 
-@import "header";
-@import "footer";
+@import 'mixin';
 
-@import "index";
-@import "photography";
-
+@import 'header';
+@import 'footer';
+@import 'index';
+@import 'photography';
+@import 'responsive';
 @import 'font-awesome';

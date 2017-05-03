@@ -1,7 +1,36 @@
+main.photography {
+    min-height:auto;
+}
+
 section.gallery {
-    picture {
-        img {
-            max-width:100%;
+    padding:0 10vw;
+    margin:6vh 0;
+
+    figure {
+        padding-bottom:1.2em;
+        width:100%;
+        margin:6vh 0 0;
+        padding:0;
+
+        &:first-of-type {
+            margin-top:0;
+        }
+
+        picture {
+            position:relative;
+            display:block;
+
+            img {
+                max-width:100%;
+            }
+        }
+
+        figcaption {
+            display:block;
+            height:1.5em;
+            line-height:1.5em;
+            text-overflow:ellipsis;
+            text-align:center;
         }
     }
 }

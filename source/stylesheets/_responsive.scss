@@ -1,0 +1,32 @@
+@media all and (max-width: 580px) {
+    header {
+        height:auto;
+
+        a.logo, nav {
+            float:none;
+            height:auto;
+            line-height:normal;
+        }
+
+        a.logo, nav > a {
+            display:block;
+            text-align:center;
+            width:100%;
+            margin:0;
+        }
+
+        nav > a {
+            margin:1em 0;
+            height:2em;
+        }
+    }
+
+    main {
+        min-height:auto;
+    }
+
+    footer {
+        margin:6vh 0 3vh;
+    }
+}
+

@@ -27,7 +27,7 @@ PHOTO_SIZES = {
 }
 
 ignore 'photos/*'
-ignore 'photography.html'
+#ignore 'photography.html'
 
 activate :photo_resize,
   path_name: 'photos', sizes: PHOTO_SIZES
@@ -35,8 +35,8 @@ activate :photo_resize,
 ###
 # Helpers
 
-#helpers do
-#end
+helpers do
+end
 
 # Build-specific configuration
 configure :build do
