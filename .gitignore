@@ -19,3 +19,6 @@
 
 # Ignore resized source images
 /source/images/photos
+
+# Ignore firebase log
+firebase-debug.log
